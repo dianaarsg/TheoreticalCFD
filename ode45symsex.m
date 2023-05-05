@@ -114,6 +114,11 @@ for m = 1:nmax
     %TT = TT + (dt/6) * (k1T + 2 * k2T + 2 * k3T + k4T);
     if isnan(XX(2,:)), error ('Stability error!'); end
 
+    plot3(X(:,1), X(:,2), X(:,3));
+    %plot3(T(:,1),T(:,2), T(:,3));
+    %title(['t = ', num2str(t)]);
+    drawnow %to plot until is done
+
 end
 
 toc
